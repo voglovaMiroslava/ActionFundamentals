@@ -54,13 +54,13 @@ jobs:
       url: https://writeabout.net
     steps:
       - run: | 
-          echo "${{ github.event.inputs.envrionment}}"
+          echo "${{ toJSON(github.event.inputs)}}"
           sleep 10
       - run: | 
-          echo "${{ github.event.inputs}}"
+          echo "2"
           sleep 10
       - run: | 
-          echo "${{ github.event}}"
+          echo "3"
           sleep 10
       - run: | 
           echo "Deploy step 4"
