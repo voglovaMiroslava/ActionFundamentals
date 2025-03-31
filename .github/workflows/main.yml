@@ -31,15 +31,15 @@ jobs:
   Test:
     runs-on: ubuntu-latest
     environment: Test
+    if: github.event_name == 'workflow_dispatch'
     steps:
-      - if: github.event_name == 'workflow_dispatch'
       - run: echo "Testing..."
       
   Load-Test:
     runs-on: ubuntu-latest
     environment: Load-Test
+    if: github.event_name == 'workflow_dispatch'
     steps:
-      - if: github.event_name == 'workflow_dispatch'
       - run: | 
           echo "Testing..."
           sleep 15
