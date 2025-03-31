@@ -52,6 +52,7 @@ jobs:
     environment:
       name: Production
       url: https://writeabout.net
+    if: github.event.inputs.environment == 'Production'
     steps:
       - run: | 
           echo "${{ toJSON(github.event.inputs) }}"
