@@ -54,10 +54,10 @@ jobs:
       url: https://writeabout.net
     steps:
       - run: | 
-          echo "${{ toJSON(github.event.inputs)}}"
+          echo "${{ toJSON(github.event.inputs) }}"
           sleep 10
       - run: | 
-          echo "2"
+          echo "${{ github.event.inputs.environment }}"
           sleep 10
       - run: | 
           echo "3"
