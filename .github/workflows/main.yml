@@ -52,16 +52,15 @@ jobs:
     environment:
       name: Production
       url: https://writeabout.net
-    if: github.event.inputs.envrionment == 'Production'
     steps:
       - run: | 
-          echo "Deploy step 1"
+          echo "${{ github.event.inputs.envrionment}}"
           sleep 10
       - run: | 
-          echo "Deploy step 2"
+          echo "${{ github.event.inputs}}"
           sleep 10
       - run: | 
-          echo "Deploy step 3"
+          echo "${{ github.event}}"
           sleep 10
       - run: | 
           echo "Deploy step 4"
